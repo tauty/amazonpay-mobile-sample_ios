@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		654B2EBD22ABB4B700582E4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2EBC22ABB4B700582E4E /* AppDelegate.swift */; };
+		654B2EBF22ABB4B700582E4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2EBE22ABB4B700582E4E /* ViewController.swift */; };
+		654B2EC222ABB4B700582E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654B2EC022ABB4B700582E4E /* Main.storyboard */; };
+		654B2EC422ABB4BB00582E4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654B2EC322ABB4BB00582E4E /* Assets.xcassets */; };
+		654B2EC722ABB4BB00582E4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654B2EC522ABB4BB00582E4E /* LaunchScreen.storyboard */; };
+		654B2ECF22AC7CED00582E4E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2ECE22AC7CED00582E4E /* WebViewController.swift */; };
+		654B2ED522AC868300582E4E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654B2ED422AC868300582E4E /* WebKit.framework */; };
+		654B2ED722ACF4F900582E4E /* ThanksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2ED622ACF4F900582E4E /* ThanksController.swift */; };
+		654B2ED922ADCDF300582E4E /* NativeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2ED822ADCDF300582E4E /* NativeController.swift */; };
+		6550204A22ADD98A008854F8 /* btn_amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6550204922ADD98A008854F8 /* btn_amazon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		654B2EB922ABB4B700582E4E /* amazonpay-mobile-sample_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "amazonpay-mobile-sample_ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		654B2EBC22ABB4B700582E4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		654B2EBE22ABB4B700582E4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		654B2EC122ABB4B700582E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		654B2EC322ABB4BB00582E4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		654B2EC622ABB4BB00582E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		654B2EC822ABB4BB00582E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654B2ECE22AC7CED00582E4E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		654B2ED422AC868300582E4E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		654B2ED622ACF4F900582E4E /* ThanksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksController.swift; sourceTree = "<group>"; };
+		654B2ED822ADCDF300582E4E /* NativeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeController.swift; sourceTree = "<group>"; };
+		6550204922ADD98A008854F8 /* btn_amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_amazon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		654B2EB622ABB4B700582E4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654B2ED522AC868300582E4E /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		654B2EB022ABB4B700582E4E = {
+			isa = PBXGroup;
+			children = (
+				654B2EBB22ABB4B700582E4E /* amazonpay-mobile-sample_ios */,
+				654B2EBA22ABB4B700582E4E /* Products */,
+				654B2ED322AC868200582E4E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		654B2EBA22ABB4B700582E4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				654B2EB922ABB4B700582E4E /* amazonpay-mobile-sample_ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		654B2EBB22ABB4B700582E4E /* amazonpay-mobile-sample_ios */ = {
+			isa = PBXGroup;
+			children = (
+				654B2EBC22ABB4B700582E4E /* AppDelegate.swift */,
+				654B2EBE22ABB4B700582E4E /* ViewController.swift */,
+				654B2EC022ABB4B700582E4E /* Main.storyboard */,
+				654B2ED822ADCDF300582E4E /* NativeController.swift */,
+				654B2ED622ACF4F900582E4E /* ThanksController.swift */,
+				654B2ECE22AC7CED00582E4E /* WebViewController.swift */,
+				654B2EC322ABB4BB00582E4E /* Assets.xcassets */,
+				6550204922ADD98A008854F8 /* btn_amazon.png */,
+				654B2EC522ABB4BB00582E4E /* LaunchScreen.storyboard */,
+				654B2EC822ABB4BB00582E4E /* Info.plist */,
+			);
+			path = "amazonpay-mobile-sample_ios";
+			sourceTree = "<group>";
+		};
+		654B2ED322AC868200582E4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				654B2ED422AC868300582E4E /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		654B2EB822ABB4B700582E4E /* amazonpay-mobile-sample_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654B2ECB22ABB4BB00582E4E /* Build configuration list for PBXNativeTarget "amazonpay-mobile-sample_ios" */;
+			buildPhases = (
+				654B2EB522ABB4B700582E4E /* Sources */,
+				654B2EB622ABB4B700582E4E /* Frameworks */,
+				654B2EB722ABB4B700582E4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "amazonpay-mobile-sample_ios";
+			productName = "amazonpay-mobile-sample_ios";
+			productReference = 654B2EB922ABB4B700582E4E /* amazonpay-mobile-sample_ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		654B2EB122ABB4B700582E4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Uchiumi, Tetsuo";
+				TargetAttributes = {
+					654B2EB822ABB4B700582E4E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 654B2EB422ABB4B700582E4E /* Build configuration list for PBXProject "amazonpay-mobile-sample_ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 654B2EB022ABB4B700582E4E;
+			productRefGroup = 654B2EBA22ABB4B700582E4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				654B2EB822ABB4B700582E4E /* amazonpay-mobile-sample_ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		654B2EB722ABB4B700582E4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654B2EC722ABB4BB00582E4E /* LaunchScreen.storyboard in Resources */,
+				654B2EC422ABB4BB00582E4E /* Assets.xcassets in Resources */,
+				6550204A22ADD98A008854F8 /* btn_amazon.png in Resources */,
+				654B2EC222ABB4B700582E4E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		654B2EB522ABB4B700582E4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654B2EBF22ABB4B700582E4E /* ViewController.swift in Sources */,
+				654B2ECF22AC7CED00582E4E /* WebViewController.swift in Sources */,
+				654B2ED722ACF4F900582E4E /* ThanksController.swift in Sources */,
+				654B2EBD22ABB4B700582E4E /* AppDelegate.swift in Sources */,
+				654B2ED922ADCDF300582E4E /* NativeController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		654B2EC022ABB4B700582E4E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654B2EC122ABB4B700582E4E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		654B2EC522ABB4BB00582E4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654B2EC622ABB4BB00582E4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		654B2EC922ABB4BB00582E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		654B2ECA22ABB4BB00582E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		654B2ECC22ABB4BB00582E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JMC4AK3A2;
+				INFOPLIST_FILE = "amazonpay-mobile-sample_ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.pay.sample.ios.amazonpay-mobile-sample-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		654B2ECD22ABB4BB00582E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JMC4AK3A2;
+				INFOPLIST_FILE = "amazonpay-mobile-sample_ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.pay.sample.ios.amazonpay-mobile-sample-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		654B2EB422ABB4B700582E4E /* Build configuration list for PBXProject "amazonpay-mobile-sample_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654B2EC922ABB4BB00582E4E /* Debug */,
+				654B2ECA22ABB4BB00582E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		654B2ECB22ABB4BB00582E4E /* Build configuration list for PBXNativeTarget "amazonpay-mobile-sample_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654B2ECC22ABB4BB00582E4E /* Debug */,
+				654B2ECD22ABB4BB00582E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 654B2EB122ABB4B700582E4E /* Project object */;
+}

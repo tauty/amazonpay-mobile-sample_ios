@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="amazonpay_mobile_sample_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ck-vf-u61">
+                                <rect key="frame" x="20" y="202" width="374" height="30"/>
+                                <state key="normal" title="NATIVE"/>
+                                <connections>
+                                    <segue destination="9LC-fb-eWo" kind="show" id="C8W-BE-Ium"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYz-81-fI5">
+                                <rect key="frame" x="20" y="295" width="374" height="30"/>
+                                <state key="normal" title="WEBVIEW"/>
+                                <connections>
+                                    <segue destination="wKw-4E-v2B" kind="show" id="k2X-OC-NHj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7ck-vf-u61" firstAttribute="leading" secondItem="oYz-81-fI5" secondAttribute="leading" id="Nvc-sW-054"/>
+                            <constraint firstItem="7ck-vf-u61" firstAttribute="trailing" secondItem="oYz-81-fI5" secondAttribute="trailing" id="QRQ-Nx-T4F"/>
+                            <constraint firstItem="oYz-81-fI5" firstAttribute="top" secondItem="7ck-vf-u61" secondAttribute="bottom" constant="63" id="efi-Jc-qmG"/>
+                            <constraint firstItem="7ck-vf-u61" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="f18-9G-2ck"/>
+                            <constraint firstItem="7ck-vf-u61" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="ngP-g1-txL"/>
+                            <constraint firstItem="7ck-vf-u61" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ttz-1Y-LYC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="473"/>
+        </scene>
+        <!--Native Controller-->
+        <scene sceneID="I8N-Dj-BGu">
+            <objects>
+                <viewController id="9LC-fb-eWo" customClass="NativeController" customModule="amazonpay_mobile_sample_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Xh-8P-mkw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZe-OK-3AP">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <state key="normal" title="Top"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="N7R-5x-7ME"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire HD8            ¥8,980" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufi-xW-WGE">
+                                <rect key="frame" x="20" y="229" width="217" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5vQ-1d-LJO">
+                                <rect key="frame" x="297" y="227" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5D-LV-WCG">
+                                <rect key="frame" x="328" y="200" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire HD10         ¥15,980" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5v1-Xx-mOQ">
+                                <rect key="frame" x="20" y="265" width="223" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="wM1-HG-qZk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="商品名 &amp; 単価" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hci-RK-b4O">
+                                <rect key="frame" x="77" y="200" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8M-B6-Wo5">
+                                <rect key="frame" x="103" y="426" width="209" height="45"/>
+                                <state key="normal" title="Button" image="btn_amazon.png"/>
+                                <connections>
+                                    <action selector="onAmazonPayButtonClick:" destination="9LC-fb-eWo" eventType="touchUpInside" id="6uH-e9-ZTy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-oR-y69">
+                                <rect key="frame" x="20" y="363" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="購入手続きへ"/>
+                                <connections>
+                                    <action selector="onRegisterButtonClick:" destination="9LC-fb-eWo" eventType="touchUpInside" id="9fj-ye-gha"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aye-iC-3bA">
+                                <rect key="frame" x="20" y="116" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.2008432097" blue="0.15676713989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyE-VK-qiL">
+                                <rect key="frame" x="297" y="263" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uyE-VK-qiL" firstAttribute="leading" secondItem="5v1-Xx-mOQ" secondAttribute="trailing" constant="54" id="6NV-pQ-AFf"/>
+                            <constraint firstItem="Ufi-xW-WGE" firstAttribute="leading" secondItem="7Xh-8P-mkw" secondAttribute="leadingMargin" id="Bs5-6n-lXl"/>
+                            <constraint firstItem="uyE-VK-qiL" firstAttribute="top" secondItem="5vQ-1d-LJO" secondAttribute="bottom" constant="6" id="CkD-4b-RTh"/>
+                            <constraint firstItem="5vQ-1d-LJO" firstAttribute="top" secondItem="K5D-LV-WCG" secondAttribute="bottom" constant="6" id="E5i-NA-91E"/>
+                            <constraint firstItem="bZe-OK-3AP" firstAttribute="bottom" secondItem="nuE-px-YHB" secondAttribute="bottom" id="Huo-zH-JnJ"/>
+                            <constraint firstItem="5vQ-1d-LJO" firstAttribute="trailing" secondItem="uyE-VK-qiL" secondAttribute="trailing" id="KSB-2r-faZ"/>
+                            <constraint firstItem="5vQ-1d-LJO" firstAttribute="leading" secondItem="uyE-VK-qiL" secondAttribute="leading" id="LUL-Lp-u2Y"/>
+                            <constraint firstItem="K5D-LV-WCG" firstAttribute="centerX" secondItem="5vQ-1d-LJO" secondAttribute="centerX" id="Npe-2X-WkZ"/>
+                            <constraint firstItem="Hci-RK-b4O" firstAttribute="leading" secondItem="nuE-px-YHB" secondAttribute="leading" constant="77" id="PUR-r5-TSV"/>
+                            <constraint firstItem="Hci-RK-b4O" firstAttribute="baseline" secondItem="K5D-LV-WCG" secondAttribute="baseline" id="R62-nr-iIt"/>
+                            <constraint firstItem="Hci-RK-b4O" firstAttribute="top" secondItem="nuE-px-YHB" secondAttribute="top" constant="156" id="Ssn-p5-Hlq"/>
+                            <constraint firstItem="z8M-B6-Wo5" firstAttribute="centerX" secondItem="bZe-OK-3AP" secondAttribute="centerX" id="Tla-rv-oB2"/>
+                            <constraint firstItem="z8M-B6-Wo5" firstAttribute="leading" secondItem="nuE-px-YHB" secondAttribute="leading" constant="103" id="Vue-7w-CVq"/>
+                            <constraint firstItem="5v1-Xx-mOQ" firstAttribute="leading" secondItem="bZe-OK-3AP" secondAttribute="leading" id="YjJ-SC-QL4"/>
+                            <constraint firstItem="5v1-Xx-mOQ" firstAttribute="top" secondItem="Ufi-xW-WGE" secondAttribute="bottom" constant="9" id="ZKw-s3-2NZ"/>
+                            <constraint firstItem="uyE-VK-qiL" firstAttribute="trailing" secondItem="bZe-OK-3AP" secondAttribute="trailing" id="b4M-u6-cwX"/>
+                            <constraint firstItem="Ufi-xW-WGE" firstAttribute="top" secondItem="Hci-RK-b4O" secondAttribute="bottom" constant="8" symbolic="YES" id="eXN-gg-pAR"/>
+                            <constraint firstItem="z8M-B6-Wo5" firstAttribute="centerY" secondItem="7Xh-8P-mkw" secondAttribute="centerY" id="jJR-KC-0f0"/>
+                            <constraint firstItem="Hci-RK-b4O" firstAttribute="centerX" secondItem="5v1-Xx-mOQ" secondAttribute="centerX" id="qxm-lV-Dcs"/>
+                            <constraint firstItem="Ufi-xW-WGE" firstAttribute="centerY" secondItem="5vQ-1d-LJO" secondAttribute="centerY" id="rTK-0l-2do"/>
+                            <constraint firstItem="Ufi-xW-WGE" firstAttribute="leading" secondItem="5v1-Xx-mOQ" secondAttribute="leading" id="vxb-bL-Sq4"/>
+                            <constraint firstItem="5vQ-1d-LJO" firstAttribute="trailing" secondItem="7Xh-8P-mkw" secondAttribute="trailingMargin" id="y6d-Ua-vnu"/>
+                            <constraint firstItem="5v1-Xx-mOQ" firstAttribute="centerY" secondItem="uyE-VK-qiL" secondAttribute="centerY" id="zs1-lj-Xyb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nuE-px-YHB"/>
+                    </view>
+                    <connections>
+                        <outlet property="amznPayButton" destination="z8M-B6-Wo5" id="5hh-Z7-oKO"/>
+                        <outlet property="hd10Text" destination="uyE-VK-qiL" id="IJR-uD-iqS"/>
+                        <outlet property="hd8Text" destination="5vQ-1d-LJO" id="t2J-oA-k5a"/>
+                        <outlet property="registerButton" destination="TFd-oR-y69" id="QAD-OO-mJV"/>
+                        <outlet property="warnLabel" destination="Aye-iC-3bA" id="XnV-2d-NqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Kz-Kc-ehp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="2.6785714285714284"/>
+        </scene>
+        <!--Thanks Controller-->
+        <scene sceneID="YEa-Oe-kph">
+            <objects>
+                <viewController storyboardIdentifier="ThanksVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="26G-o0-kL8" customClass="ThanksController" customModule="amazonpay_mobile_sample_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MhO-WL-3ES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご購入ありがとうございました。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9T-8q-fnL">
+                                <rect key="frame" x="20" y="44" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzM-cI-xSc">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <state key="normal" title="Top"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="oKH-fD-YiN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nzM-cI-xSc" firstAttribute="bottom" secondItem="ofV-FH-9PR" secondAttribute="bottom" id="2Rb-f9-jvs"/>
+                            <constraint firstItem="r9T-8q-fnL" firstAttribute="trailing" secondItem="MhO-WL-3ES" secondAttribute="trailingMargin" id="I67-jb-7vP"/>
+                            <constraint firstItem="r9T-8q-fnL" firstAttribute="trailing" secondItem="nzM-cI-xSc" secondAttribute="trailing" id="KxA-vZ-cJN"/>
+                            <constraint firstItem="r9T-8q-fnL" firstAttribute="top" secondItem="ofV-FH-9PR" secondAttribute="top" id="Soy-oy-Q75"/>
+                            <constraint firstItem="r9T-8q-fnL" firstAttribute="leading" secondItem="nzM-cI-xSc" secondAttribute="leading" id="fyL-J3-IOh"/>
+                            <constraint firstItem="r9T-8q-fnL" firstAttribute="leading" secondItem="MhO-WL-3ES" secondAttribute="leadingMargin" id="qRf-lV-1yB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ofV-FH-9PR"/>
+                    </view>
+                    <connections>
+                        <outlet property="thanksLabel" destination="r9T-8q-fnL" id="OKy-i2-Ct3"/>
+                        <outlet property="topButton" destination="nzM-cI-xSc" id="EBa-aA-AwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WhP-iu-UWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="473"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ef0-1I-lpP">
+            <objects>
+                <viewController id="wKw-4E-v2B" customClass="WebViewController" customModule="amazonpay_mobile_sample_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5A1-Ew-KP6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-Ka-cxW">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <state key="normal" title="Top"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="lm2-q3-8Ib"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Md8-Ka-cxW" firstAttribute="trailing" secondItem="5A1-Ew-KP6" secondAttribute="trailingMargin" id="FHw-P5-EA4"/>
+                            <constraint firstItem="Md8-Ka-cxW" firstAttribute="bottom" secondItem="Ole-SF-vOK" secondAttribute="bottom" id="aYU-o5-TQD"/>
+                            <constraint firstItem="Md8-Ka-cxW" firstAttribute="leading" secondItem="5A1-Ew-KP6" secondAttribute="leadingMargin" id="yzV-jc-WjW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ole-SF-vOK"/>
+                    </view>
+                    <connections>
+                        <outlet property="topButton" destination="Md8-Ka-cxW" id="Wxg-iC-xeC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKm-qX-OaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_amazon.png" width="200" height="45"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="N7R-5x-7ME"/>
+    </inferredMetricsTieBreakers>
+</document>
