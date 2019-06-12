@@ -35,10 +35,12 @@ class NativeController : UIViewController {
             warnLabel.text = "せめて一つは買ってください！"
             return
         }
+        registerButton.isHidden = true
+        warnLabel.text = ""
         register()
+        
         hd8Text.isEnabled = false
         hd10Text.isEnabled = false
-        registerButton.isHidden = true
         amznPayButton.isHidden = false
     }
 
