@@ -10,7 +10,7 @@ import SafariServices
 
 class NativeController : UIViewController {
     
-    let numericRegex = try! NSRegularExpression(pattern: "\\A[0-9]+\\z")
+    let numericRegex = try! NSRegularExpression(pattern: "\\A(0|[1-9][0-9]*)\\z")
     
     @IBOutlet weak var warnLabel: UILabel!
     @IBOutlet weak var hd8Text: UITextField!
@@ -46,7 +46,7 @@ class NativeController : UIViewController {
 
     @IBAction func onAmazonPayButtonClick(_ sender: Any) {
         if token != nil {
-            let safariView = SFSafariViewController(url: NSURL(string: "https://localhost:8443/button?token=" + token!)! as URL)
+            let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl + "button?token=" + token!)! as URL)
             present(safariView, animated: true, completion: nil)
         }
     }
@@ -57,7 +57,7 @@ class NativeController : UIViewController {
     }
     
     func register() {
-        let url = URL(string: "https://localhost:8443/registerOrder")
+        let url = URL(string: Config.shared.baseUrl + "registerOrder")
         var request = URLRequest(url: url!)
         // POSTを指定
         request.httpMethod = "POST"

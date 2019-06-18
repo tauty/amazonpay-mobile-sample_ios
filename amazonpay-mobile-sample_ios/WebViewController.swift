@@ -15,33 +15,35 @@ class WebViewController : UIViewController {
     
     @IBOutlet weak var topButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("WebViewController#viewDidLoad")
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("WebViewController#viewDidAppear")
         
-        // WebViewの画面サイズの設定
-        var webViewPadding: CGFloat = 0
-        if #available(iOS 11.0, *) {
-            let window = UIApplication.shared.keyWindow
-            webViewPadding = window!.safeAreaInsets.top
+        if webView == nil {
+            // WebViewの画面サイズの設定
+            var webViewPadding: CGFloat = 0
+            if #available(iOS 11.0, *) {
+                let window = UIApplication.shared.keyWindow
+                webViewPadding = window!.safeAreaInsets.top
+            }
+            let webViewHeight = topButton.frame.origin.y - webViewPadding
+            let rect = CGRect(x: 0, y: webViewPadding, width: view.frame.size.width, height: webViewHeight)
+            
+            // JavaScript側からのCallback受付の設定
+            let userContentController = WKUserContentController()
+            userContentController.add(self, name: "jsCallbackHandler")
+            let webConfig = WKWebViewConfiguration();
+            webConfig.userContentController = userContentController
+            
+            // WebViewの生成、orderページの読み込み
+            webView = WKWebView(frame: rect, configuration: webConfig)
+            let webUrl = URL(string: Config.shared.baseUrl + "order.html")!
+            let myRequest = URLRequest(url: webUrl)
+            webView.load(myRequest)
+            
+            // 生成したWebViewの画面への追加
+            self.view.addSubview(webView)
         }
-        let webViewHeight = topButton.frame.origin.y - webViewPadding
-        let rect = CGRect(x: 0, y: webViewPadding, width: view.frame.size.width, height: webViewHeight)
-
-        // JavaScript側からのCallback受付の設定
-        let userContentController = WKUserContentController()
-        userContentController.add(self, name: "jsCallbackHandler")
-        let webConfig = WKWebViewConfiguration();
-        webConfig.userContentController = userContentController
-        
-        // WebViewの生成、orderページの読み込み
-        webView = WKWebView(frame: rect, configuration: webConfig)
-        let webUrl = URL(string: "https://localhost:8443/order.html")!
-        let myRequest = URLRequest(url: webUrl)
-        webView.load(myRequest)
-        
-        // 生成したWebViewの画面への追加
-        self.view.addSubview(webView)
     }
 }
 
@@ -54,7 +56,7 @@ extension WebViewController: WKScriptMessageHandler {
         case "jsCallbackHandler":
             print("jsCallbackHandler")
             if let token = message.body as? String {
-                let safariView = SFSafariViewController(url: NSURL(string: "https://localhost:8443/button?token=" + token)! as URL)
+                let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl + "button?token=" + token)! as URL)
                 present(safariView, animated: true, completion: nil)
             }
         default:
