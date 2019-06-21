@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		653B8A0C22BCD93A00B8FEF5 /* amazonpay-mobile-sample_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "amazonpay-mobile-sample_ios.entitlements"; sourceTree = "<group>"; };
 		654B2EB922ABB4B700582E4E /* amazonpay-mobile-sample_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "amazonpay-mobile-sample_ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		654B2EBC22ABB4B700582E4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654B2EBE22ABB4B700582E4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		654B2EBB22ABB4B700582E4E /* amazonpay-mobile-sample_ios */ = {
 			isa = PBXGroup;
 			children = (
+				653B8A0C22BCD93A00B8FEF5 /* amazonpay-mobile-sample_ios.entitlements */,
 				654B2EBC22ABB4B700582E4E /* AppDelegate.swift */,
 				654B2EBE22ABB4B700582E4E /* ViewController.swift */,
 				654B2EC022ABB4B700582E4E /* Main.storyboard */,
@@ -123,6 +125,11 @@
 				TargetAttributes = {
 					654B2EB822ABB4B700582E4E = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -315,6 +322,7 @@
 			buildSettings = {
 				AMS_BASE_URL = "https://localhost:8443/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "amazonpay-mobile-sample_ios/amazonpay-mobile-sample_ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JMC4AK3A2;
 				INFOPLIST_FILE = "amazonpay-mobile-sample_ios/Info.plist";
@@ -335,6 +343,7 @@
 			buildSettings = {
 				AMS_BASE_URL = "https://production.sample.com/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "amazonpay-mobile-sample_ios/amazonpay-mobile-sample_ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JMC4AK3A2;
 				INFOPLIST_FILE = "amazonpay-mobile-sample_ios/Info.plist";
