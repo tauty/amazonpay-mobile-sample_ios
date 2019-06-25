@@ -44,28 +44,18 @@ class NativeController : UIViewController {
         amznPayButton.isHidden = false
     }
 
-    @IBAction func onAmazonPayButtonClick(_ sender: Any) {
-        if token != nil {
-            let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl + "button?token=" + token!)! as URL)
-            present(safariView, animated: true, completion: nil)
-        }
-    }
-    
     func isNumeric(_ text:String) -> Bool {
         let range = NSRange(location: 0, length: text.utf16.count)
         return numericRegex.firstMatch(in: text, options: [], range: range) != nil
     }
     
     func register() {
-        let url = URL(string: Config.shared.baseUrl + "registerOrder")
+        let url = URL(string: Config.shared.baseUrl + "create_order_rest")
         var request = URLRequest(url: url!)
         // POSTを指定
         request.httpMethod = "POST"
         // POSTするデータをBodyとして設定
-        var httpBody = "hd8=" + hd8Text.text! + "&hd10=" + hd10Text.text!
-        if token != nil {
-            httpBody = httpBody + "&token=" + token!
-        }
+        let httpBody = "hd8=" + hd8Text.text! + "&hd10=" + hd10Text.text!
         request.httpBody = httpBody.data(using: .utf8)
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
@@ -74,6 +64,13 @@ class NativeController : UIViewController {
                 self.token = String(data: data, encoding: .utf8)
             }
         }.resume()
+    }
+    
+    @IBAction func onAmazonPayButtonClick(_ sender: Any) {
+        if token != nil {
+            let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl + "button?token=" + token!)! as URL)
+            present(safariView, animated: true, completion: nil)
+        }
     }
     
 }
