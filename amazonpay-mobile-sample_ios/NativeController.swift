@@ -8,6 +8,10 @@
 import UIKit
 import SafariServices
 
+
+/// ViewControllerから起動される、NATIVEサンプル用Controller.
+/// Kindle Fire HD8とKindle Fire HD10の購入個数を指定して「購入手続きへ」ボタンをクリックすると受注が作成されて、
+/// AmazonPayボタンでSFSafariViewの購入フローが起動する.
 class NativeController : UIViewController {
     
     let numericRegex = try! NSRegularExpression(pattern: "\\A(0|[1-9][0-9]*)\\z")

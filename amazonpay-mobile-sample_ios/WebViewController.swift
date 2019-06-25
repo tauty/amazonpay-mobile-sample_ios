@@ -9,6 +9,8 @@ import UIKit
 import WebKit
 import SafariServices
 
+/// MainActivityから起動される、WEBVIEWサンプル用Controller.
+/// WebView内で動作するJavaScriptから起動されるCallback関数を登録し、そのCallback関数からSFSafariViewの購入フローを起動する.
 class WebViewController : UIViewController {
     
     var webView: WKWebView!
@@ -56,6 +58,7 @@ extension WebViewController: WKScriptMessageHandler {
         case "jsCallbackHandler":
             print("jsCallbackHandler")
             if let token = message.body as? String {
+                // SFSafariViewの購入フローを起動
                 let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl + "button?token=" + token)! as URL)
                 present(safariView, animated: true, completion: nil)
             }

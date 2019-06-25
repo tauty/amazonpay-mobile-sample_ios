@@ -8,6 +8,9 @@
 import UIKit
 import WebKit
 
+
+/// 購入完了後に表示されるController.
+/// 受注の情報と取得した購入者情報などを表示する.
 class ThanksController : UIViewController {
     
     var token:String?
