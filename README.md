@@ -56,7 +56,7 @@ Simulatorが立ち上がり、サンプルアプリが起動します。(1〜2�
 ここでは、起動したSimulatorへのInstall方法を説明します。
 
 1. SSL自己証明書のDownload  
-Safariを立ち上げ、下記のURLにアクセスします。  
+Safariを立ち上げ、下記のURLにアクセスします。(Chrome等の他のブラウザだとうまくいかないことがあるので、必ずSafariをご使用ください。)  
 https://localhost:8443/crt/sample.crt  
 下記のように警告が出るので、「Show Details」  
 <img src="img/simu_warn.png" width="300">  
