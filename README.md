@@ -7,14 +7,14 @@ https://github.com/tauty/amazonpay-mobile-sample_server
 アプリ側で商品の購入数を選んで受注情報を作成し、SFSafariViewを起動してAmazon Payへのログイン・住所＆支払い方法の選択・購入を実施し、またアプリ側に戻って購入完了画面を表示します。  
 
 ### 動作環境
-Android 7以降: Google Chrome 64以降  
+Apple iOS バージョン11.2以降: Safari Mobile 11以降  
 [参考] https://pay.amazon.com/jp/help/202030010
 
 ### 画面動作
 ![native_flow](img/ios_native.gif)
 
 ### 詳細フロー
-./flow-ios.xlsx の「Native」タブ参照。  
+[flow-ios.xlsx](./flow-ios.xlsx)の「Native」タブ参照。  
 ※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
 
 ## WebView版
@@ -23,14 +23,14 @@ WebView(アプリ内ブラウザ)を使ったアプリ向けの実装サンプ�
 ※ Amazon Payではセキュリティ確保のため、URLを隠したり偽装したりできてしまうWebView上でのログイン処理を原則禁止しております。そのため、本サンプルのようにSFSafariViewへ処理を飛ばす必要があります。
 
 ### 動作環境
-Android 7以降: Google Chrome 64以降  
+Apple iOS バージョン11.2以降: Safari Mobile 11以降  
 [参考] https://pay.amazon.com/jp/help/202030010
 
 ### 画面動作
 ![webview_flow](img/ios_webview.gif)
 
 ### 詳細フロー
-./flow-ios.xlsx の「WebView」タブ参照。  
+[flow-ios.xlsx](./flow-ios.xlsx)の「WebView」タブ参照。  
 ※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
 
 # iOS版サンプルアプリのインストール
