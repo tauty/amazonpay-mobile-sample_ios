@@ -36,7 +36,7 @@ Apple iOS バージョン11.2以降: Safari Mobile 11以降
 # iOS版サンプルアプリのインストール
 
 ## プロジェクトのclone
-まずは、clientのandroid側にあたる本プロジェクトをcloneしてください。  
+まずは、clientのiOS(iPhone, iPad)側にあたる本プロジェクトをcloneしてください。  
 ```
 git clone https://github.com/tauty/amazonpay-mobile-sample_ios.git
 ```
