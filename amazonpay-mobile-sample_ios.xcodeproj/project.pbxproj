@@ -326,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JMC4AK3A2;
 				INFOPLIST_FILE = "amazonpay-mobile-sample_ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.pay.sample.ios.amazonpay-mobile-sample-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -344,7 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JMC4AK3A2;
 				INFOPLIST_FILE = "amazonpay-mobile-sample_ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.pay.sample.ios.amazonpay-mobile-sample-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
