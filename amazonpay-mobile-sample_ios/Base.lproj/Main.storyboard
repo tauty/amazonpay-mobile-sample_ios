@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -98,7 +99,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8M-B6-Wo5">
                                 <rect key="frame" x="103" y="426" width="209" height="45"/>
-                                <state key="normal" title="Button" image="btn_amazon.png"/>
+                                <state key="normal" title="Button" image="gold_medium_pwa"/>
                                 <connections>
                                     <action selector="onAmazonPayButtonClick:" destination="9LC-fb-eWo" eventType="touchUpInside" id="6uH-e9-ZTy"/>
                                 </connections>
@@ -241,9 +242,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_amazon.png" width="200" height="45"/>
+        <image name="gold_medium_pwa" width="200" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oKH-fD-YiN"/>
+        <segue reference="N7R-5x-7ME"/>
     </inferredMetricsTieBreakers>
 </document>

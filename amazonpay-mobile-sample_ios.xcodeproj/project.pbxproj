@@ -16,7 +16,6 @@
 		654B2ED522AC868300582E4E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654B2ED422AC868300582E4E /* WebKit.framework */; };
 		654B2ED722ACF4F900582E4E /* ThanksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2ED622ACF4F900582E4E /* ThanksController.swift */; };
 		654B2ED922ADCDF300582E4E /* NativeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2ED822ADCDF300582E4E /* NativeController.swift */; };
-		6550204A22ADD98A008854F8 /* btn_amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6550204922ADD98A008854F8 /* btn_amazon.png */; };
 		6564A88E22B99C140083EBC4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564A88D22B99C140083EBC4 /* Config.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		654B2ED422AC868300582E4E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		654B2ED622ACF4F900582E4E /* ThanksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksController.swift; sourceTree = "<group>"; };
 		654B2ED822ADCDF300582E4E /* NativeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeController.swift; sourceTree = "<group>"; };
-		6550204922ADD98A008854F8 /* btn_amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_amazon.png; sourceTree = "<group>"; };
 		6564A88D22B99C140083EBC4 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +75,6 @@
 				654B2ED622ACF4F900582E4E /* ThanksController.swift */,
 				654B2ECE22AC7CED00582E4E /* WebViewController.swift */,
 				654B2EC322ABB4BB00582E4E /* Assets.xcassets */,
-				6550204922ADD98A008854F8 /* btn_amazon.png */,
 				654B2EC522ABB4BB00582E4E /* LaunchScreen.storyboard */,
 				654B2EC822ABB4BB00582E4E /* Info.plist */,
 				6564A88D22B99C140083EBC4 /* Config.swift */,
@@ -159,7 +156,6 @@
 			files = (
 				654B2EC722ABB4BB00582E4E /* LaunchScreen.storyboard in Resources */,
 				654B2EC422ABB4BB00582E4E /* Assets.xcassets in Resources */,
-				6550204A22ADD98A008854F8 /* btn_amazon.png in Resources */,
 				654B2EC222ABB4B700582E4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
