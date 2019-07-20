@@ -39,7 +39,7 @@ class WebViewController : UIViewController {
             
             // WebViewの生成、orderページの読み込み
             webView = WKWebView(frame: rect, configuration: webConfig)
-            let webUrl = URL(string: Config.shared.baseUrl + "order.html")!
+            let webUrl = URL(string: Config.shared.baseUrl + "ios/order")!
             let myRequest = URLRequest(url: webUrl)
             webView.load(myRequest)
             

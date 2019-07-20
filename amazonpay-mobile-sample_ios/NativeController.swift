@@ -54,7 +54,7 @@ class NativeController : UIViewController {
     }
     
     func register() {
-        let url = URL(string: Config.shared.baseUrl + "create_order_rest")
+        let url = URL(string: Config.shared.baseUrl + "ios/create_order_rest")
         var request = URLRequest(url: url!)
         // POSTを指定
         request.httpMethod = "POST"
