@@ -43,6 +43,7 @@ git clone https://github.com/tauty/amazonpay-mobile-sample_ios.git
 
 ## プロジェクトのOpenとサンプルアプリの起動
 本プロジェクトは、Mac上の[Xcode](https://developer.apple.com/jp/xcode/)で開きます。そのほかの環境での開き方は、ここでは扱いません。  
+※ ここではversion 10.2.1を使用しています。  
 まずはXcodeを立ち上げます。  
 ![androidstudio-welcome](img/xcode_open.png)
 「Open another project」で、cloneしたプロジェクトを選択して、「Open」  
@@ -54,6 +55,7 @@ Simulatorが立ち上がり、サンプルアプリが起動します。(1〜2�
 ## 自己証明書のインストール
 今回のサンプルでは、server側のSSL証明書に自己証明書が使用されているため、サンプルアプリを正しく動作させるためにはその自己証明書をiOS側にInstallする必要があります。  
 ここでは、起動したSimulatorへのInstall方法を説明します。
+※ 以下はiOS12.2で実施しておりますが、iOSのバージョンによっては手順が若干違う場合があります。
 
 1. SSL自己証明書のDownload  
 Safariを立ち上げ、下記のURLにアクセスします。(Chrome等の他のブラウザだとうまくいかないことがあるので、必ずSafariをご使用ください。)  
