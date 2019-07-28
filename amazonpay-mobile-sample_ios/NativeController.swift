@@ -25,6 +25,8 @@ class NativeController : UIViewController {
     var token:String? = nil
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         hd8Text.keyboardType = UIKeyboardType.numberPad
         hd10Text.keyboardType = UIKeyboardType.numberPad
         amznPayButton.isHidden = true

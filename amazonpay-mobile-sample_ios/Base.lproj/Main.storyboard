@@ -32,6 +32,14 @@
                                     <segue destination="wKw-4E-v2B" kind="show" id="k2X-OC-NHj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-Ku-pRl">
+                                <rect key="frame" x="168" y="378" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="UIWebView"/>
+                                <connections>
+                                    <segue destination="fZ6-w4-uiS" kind="show" id="JW2-AG-40i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -240,11 +248,39 @@
             </objects>
             <point key="canvasLocation" x="829" y="713"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="jPp-yI-H0E">
+            <objects>
+                <viewController id="fZ6-w4-uiS" customClass="UIWebViewController" customModule="amazonpay_mobile_sample_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GQJ-2f-3X0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b67-wQ-brk">
+                                <rect key="frame" x="192" y="832" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Top"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="BDg-Nr-pOa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8iS-Ll-CW2"/>
+                    </view>
+                    <connections>
+                        <outlet property="topButton" destination="b67-wQ-brk" id="Rmw-W2-h7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3X-ha-CGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="1418"/>
+        </scene>
     </scenes>
     <resources>
         <image name="gold_medium_pwa" width="200" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N7R-5x-7ME"/>
+        <segue reference="BDg-Nr-pOa"/>
     </inferredMetricsTieBreakers>
 </document>

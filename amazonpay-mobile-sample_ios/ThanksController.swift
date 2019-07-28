@@ -22,7 +22,6 @@ class ThanksController : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("ThanksController#viewDidAppear")
-        print(token!)
 
         if webView == nil {
             //　画面サイズを指定してWebViewを生成

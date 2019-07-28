@@ -16,27 +16,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         print("AppDelegate#application")
         
+        // token
+        let query = url.query!
+        let afterEqualIndex = query.index(after: query.lastIndex(of: "=")!)
+        let token = String(query.suffix(from: afterEqualIndex))
+        
+        //　windowを生成
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        //　Storyboardを指定
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         switch url.host! {
         case "thanks":
-            //　windowを生成
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            //　Storyboardを指定
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            // Viewcontrollerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "ThanksVC")
+            // Thanks画面を起動
+            
+            // ViewControllerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ThanksVC")
             
             // tokenの設定
-            let query = url.query!
-            let afterEqualIndex = query.index(after: query.lastIndex(of: "=")!)
-            let token = String(query.suffix(from: afterEqualIndex))
-            (initialViewController as? ThanksController)?.token = token
+            (vc as? ThanksController)?.token = token
             
             // rootViewControllerに入れる
-            self.window?.rootViewController = initialViewController
+            self.window?.rootViewController = vc
             // 表示
             self.window?.makeKeyAndVisible()
             return true
             
+        case "ui-to-safari-view":
+            print("AppDelegate#ui-to-safari-view")
+            // SFSafariViewの購入フローを起動
+            
+            // 現在表示中の画面(UIWebViewController)を取得
+            var vc = UIApplication.shared.keyWindow?.rootViewController
+            while (vc!.presentedViewController) != nil {
+                vc = vc!.presentedViewController
+            }
+            
+            // callbackを起動
+            (vc as? UIWebViewController)?.jsCallbackHandler(token)
+            return true
+
         default:
             return true
         }
