@@ -33,6 +33,21 @@ Apple iOS バージョン11.2以降: Safari Mobile 11以降
 [flow-ios.xlsx](./flow-ios.xlsx)の「WebView」タブ参照。  
 ※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
 
+## UIWebView版
+WebView(アプリ内ブラウザ)の中でも旧バージョンの、UIWebViewを使ったアプリ向けの実装サンプルです。  
+動作や見た目は全くWebView版と同じですが、SFSafariViewの起動方法に一部違いがあります。
+
+### 動作環境
+Apple iOS バージョン11.2以降: Safari Mobile 11以降  
+[参考] https://pay.amazon.com/jp/help/202030010
+
+### 画面動作
+WebView版と同じ同じであるため割愛
+
+### 詳細フロー
+[flow-ios.xlsx](./flow-ios.xlsx)の「UIWebView」タブ参照。  
+※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
+
 # iOS版サンプルアプリのインストール
 
 ## プロジェクトのclone
