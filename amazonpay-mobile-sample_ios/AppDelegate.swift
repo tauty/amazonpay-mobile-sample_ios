@@ -17,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("AppDelegate#application")
         
         // token
-        let query = url.query!
-        let afterEqualIndex = query.index(after: query.lastIndex(of: "=")!)
-        let token = String(query.suffix(from: afterEqualIndex))
+        var urlParams = Dictionary<String, String>.init()
+        for param in url.query!.components(separatedBy: "&") {
+            let kv = param.components(separatedBy: "=")
+            urlParams[kv[0]] = kv[1]
+        }
         
         //　windowを生成
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -30,11 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case "thanks":
             // Thanks画面を起動
             
+            print("first token:" + Config.appToken!)
+            print("first token from S/C:" + urlParams["appToken"]!)
+            print("refleshed token:" + urlParams["token"]!)
+
             // ViewControllerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
             let vc = storyboard.instantiateViewController(withIdentifier: "ThanksVC")
             
             // tokenの設定
-            (vc as? ThanksController)?.token = token
+            (vc as? ThanksController)?.token = urlParams["token"]!
             
             // rootViewControllerに入れる
             self.window?.rootViewController = vc
@@ -53,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             // callbackを起動
-            (vc as? UIWebViewController)?.jsCallbackHandler(token)
+            (vc as? UIWebViewController)?.jsCallbackHandler(urlParams["token"]!)
             return true
 
         default:
