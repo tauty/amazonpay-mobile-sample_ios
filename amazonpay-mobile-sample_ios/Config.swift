@@ -10,7 +10,6 @@ import Foundation
 
 struct Config {
     static let shared = Config()
-    static var appToken: String? = nil
 
     private let config: [AnyHashable: Any] = {
         let path = Bundle.main.path(forResource: "Info", ofType: "plist")!

@@ -60,7 +60,7 @@ extension WebViewController: WKScriptMessageHandler {
             if let token = message.body as? String {
                 // SFSafariViewの購入フローを起動
                 let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl + "button?token=" + token)! as URL)
-                Config.appToken = token
+                Holder.appToken = token
                 present(safariView, animated: true, completion: nil)
             }
         default:

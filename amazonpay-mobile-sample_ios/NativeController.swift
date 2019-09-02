@@ -75,7 +75,7 @@ class NativeController : UIViewController {
     @IBAction func onAmazonPayButtonClick(_ sender: Any) {
         if token != nil {
             let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl + "button?token=" + token!)! as URL)
-            Config.appToken = token
+            Holder.appToken = token
             present(safariView, animated: true, completion: nil)
         }
     }

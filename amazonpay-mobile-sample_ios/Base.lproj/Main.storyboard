@@ -216,6 +216,38 @@
             </objects>
             <point key="canvasLocation" x="1914" y="473"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="kgi-Xr-Ad1">
+            <objects>
+                <viewController storyboardIdentifier="ErrorVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gqJ-QD-ud8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yC3-Iv-8sc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2K-qV-NgB">
+                                <rect key="frame" x="192" y="832" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Top"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Pfc-VJ-7qU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="エラーが発生しました。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHJ-Qp-gTz">
+                                <rect key="frame" x="112" y="438" width="191" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sTO-Xu-CBe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Saf-nt-CUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911.594202898551" y="1255.5803571428571"/>
+        </scene>
         <!--Web View Controller-->
         <scene sceneID="ef0-1I-lpP">
             <objects>

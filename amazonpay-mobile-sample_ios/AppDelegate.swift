@@ -32,9 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case "thanks":
             // Thanks画面を起動
             
-            print("first token:" + Config.appToken!)
-            print("first token from S/C:" + urlParams["appToken"]!)
-            print("refleshed token:" + urlParams["token"]!)
+            // token check
+            if(isTokenNG(urlParams["token"]!, initial:urlParams["appToken"]!)) {
+                return toError(storyboard);
+            }
 
             // ViewControllerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
             let vc = storyboard.instantiateViewController(withIdentifier: "ThanksVC")
@@ -66,6 +67,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         
+    }
+    
+    func isTokenNG(_ token:String, initial appToken:String) -> Bool {
+        if(appToken != Holder.appToken!) {
+            print("appToken doesn't match! app retained token:" + Holder.appToken! + ", conveyed token:" + appToken);
+            return true;
+        }
+        if(token == appToken) {
+            print("token has not been refleshed! token:" + token)
+            return true;
+        }
+        return false
+    }
+    
+    func toError(_ storyboard:UIStoryboard) -> Bool {
+        // ViewControllerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ErrorVC")
+        // rootViewControllerに入れる
+        self.window?.rootViewController = vc
+        // 表示
+        self.window?.makeKeyAndVisible()
+        return true;
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

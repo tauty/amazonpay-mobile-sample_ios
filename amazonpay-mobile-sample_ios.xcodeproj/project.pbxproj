@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650EB586231DD28C003EB4DB /* Holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650EB585231DD28C003EB4DB /* Holder.swift */; };
 		65208B8E22EBE69A0096825F /* UIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65208B8D22EBE69A0096825F /* UIWebViewController.swift */; };
 		654B2EBD22ABB4B700582E4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2EBC22ABB4B700582E4E /* AppDelegate.swift */; };
 		654B2EBF22ABB4B700582E4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B2EBE22ABB4B700582E4E /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650EB585231DD28C003EB4DB /* Holder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holder.swift; sourceTree = "<group>"; };
 		65208B8D22EBE69A0096825F /* UIWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebViewController.swift; sourceTree = "<group>"; };
 		653B8A0C22BCD93A00B8FEF5 /* amazonpay-mobile-sample_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "amazonpay-mobile-sample_ios.entitlements"; sourceTree = "<group>"; };
 		654B2EB922ABB4B700582E4E /* amazonpay-mobile-sample_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "amazonpay-mobile-sample_ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				654B2EC522ABB4BB00582E4E /* LaunchScreen.storyboard */,
 				654B2EC822ABB4BB00582E4E /* Info.plist */,
 				6564A88D22B99C140083EBC4 /* Config.swift */,
+				650EB585231DD28C003EB4DB /* Holder.swift */,
 			);
 			path = "amazonpay-mobile-sample_ios";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				654B2ECF22AC7CED00582E4E /* WebViewController.swift in Sources */,
 				654B2ED722ACF4F900582E4E /* ThanksController.swift in Sources */,
 				654B2EBD22ABB4B700582E4E /* AppDelegate.swift in Sources */,
+				650EB586231DD28C003EB4DB /* Holder.swift in Sources */,
 				654B2ED922ADCDF300582E4E /* NativeController.swift in Sources */,
 				6564A88E22B99C140083EBC4 /* Config.swift in Sources */,
 			);
