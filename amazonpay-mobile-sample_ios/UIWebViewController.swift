@@ -43,7 +43,8 @@ class UIWebViewController : UIViewController {
     func jsCallbackHandler(_ token:String) {
         print("UIWebViewController#jsCallbackHandler")
         
-        let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl + "button?token=" + token)! as URL)
+        let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl
+            + "button?token=" + token + "&mode=" + Holder.mode)! as URL)
         Holder.appToken = token
         present(safariView, animated: true, completion: nil)
     }

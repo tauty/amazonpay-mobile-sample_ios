@@ -10,4 +10,5 @@ import Foundation
 
 struct Holder {
     static var appToken: String? = nil
+    static var mode: String = "app"
 }

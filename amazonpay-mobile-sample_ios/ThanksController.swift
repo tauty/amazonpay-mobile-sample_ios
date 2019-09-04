@@ -14,9 +14,10 @@ import WebKit
 class ThanksController : UIViewController {
     
     var token:String?
+    var accessToken:String?
+    var path = "thanks"
     var webView: WKWebView!
 
-    @IBOutlet weak var thanksLabel: UILabel!
     @IBOutlet weak var topButton: UIButton!
 
     /// WebViewでThanks画面を表示.
@@ -28,14 +29,19 @@ class ThanksController : UIViewController {
 
         if webView == nil {
             //　画面サイズを指定してWebViewを生成
-            let webViewPadding = thanksLabel.frame.origin.y + thanksLabel.frame.size.height
+            var webViewPadding: CGFloat = 0
+            if #available(iOS 11.0, *) {
+                let window = UIApplication.shared.keyWindow
+                webViewPadding = window!.safeAreaInsets.top
+            }
             let webViewHeight = topButton.frame.origin.y - webViewPadding
             let rect = CGRect(x: 0, y: webViewPadding, width: view.frame.size.width, height: webViewHeight)
             let webConfig = WKWebViewConfiguration();
             webView = WKWebView(frame: rect, configuration: webConfig)
             
-            // Thenks画面を開く
-            let webUrl = URL(string: Config.shared.baseUrl + "thanks?token=" + token!)!
+            // 画面を開く
+            let query = "?token=" + token! + (accessToken == nil ? "" : "&accessToken=" + accessToken!);
+            let webUrl = URL(string: Config.shared.baseUrl + path + query)!
             var myRequest = URLRequest(url: webUrl)
             myRequest.httpMethod = "POST"
             // myRequest.httpBody = ("token=" + token!).data(using: .utf8)! // Note: WKWebViewにはbodyが消えてしまうバグがあるらしいので、URLパラメータで指定。
