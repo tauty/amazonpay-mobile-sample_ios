@@ -21,7 +21,7 @@ class ThanksController : UIViewController {
     @IBOutlet weak var topButton: UIButton!
 
     /// WebViewでThanks画面を表示.
-    /// viewDidLoadのタイミングだと画面に配置されたLabelなどの座標がまだ入っておらず、
+    /// viewDidLoadのタイミングだと画面に配置されたButtonなどの座標がまだ入っておらず、
     /// ちょうど良いWebViewのサイズが計算できないため、viewDidAppearで処理する.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

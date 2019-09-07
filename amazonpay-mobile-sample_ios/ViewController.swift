@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var pickerView: UIPickerView = UIPickerView()
-    let list: [String] = ["アプリ側で決済", "SFSafariView側で決済"]
+    let list: [String] = ["アプリで決済", "SFSafariViewで決済"]
     let modes: [String] = ["app", "safari"]
 
     override func viewDidLoad() {

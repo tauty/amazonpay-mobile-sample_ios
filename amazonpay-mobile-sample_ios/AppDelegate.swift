@@ -99,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true;
         }
         if(token == appToken) {
-            print("token has not been refleshed! token:" + token)
+            print("token has not been refreshed! token:" + token)
             return true;
         }
         return false
