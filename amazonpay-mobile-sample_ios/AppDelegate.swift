@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         print("AppDelegate#application")
         
-        // token
+        // parse URL parameters
         var urlParams = Dictionary<String, String>.init()
         for param in url.query!.components(separatedBy: "&") {
             let kv = param.components(separatedBy: "=")
@@ -29,30 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         switch url.host! {
-        case "confirm-purchase":
-            // Thanks画面を起動
-            
-            // token check
-            if(isTokenNG(urlParams["token"]!, initial:urlParams["appToken"]!)) {
-                return toError(storyboard);
-            }
-            
-            // ViewControllerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ThanksVC")
-            
-            // tokenの設定
-            (vc as? ThanksController)?.token = urlParams["token"]!
-            (vc as? ThanksController)?.accessToken = urlParams["accessToken"]!
-
-            // pathの設定
-            (vc as? ThanksController)?.path = "confirm_purchase"
-
-            // rootViewControllerに入れる
-            self.window?.rootViewController = vc
-            // 表示
-            self.window?.makeKeyAndVisible()
-            return true
-            
         case "thanks":
             // Thanks画面を起動
             
@@ -60,13 +36,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if(isTokenNG(urlParams["token"]!, initial:urlParams["appToken"]!)) {
                 return toError(storyboard);
             }
-
+            
             // ViewControllerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
             let vc = storyboard.instantiateViewController(withIdentifier: "ThanksVC")
             
             // tokenの設定
             (vc as? ThanksController)?.token = urlParams["token"]!
-            
+            if(urlParams["accessToken"] != nil) {
+                (vc as? ThanksController)?.accessToken = urlParams["accessToken"]!
+            }
             // rootViewControllerに入れる
             self.window?.rootViewController = vc
             // 表示

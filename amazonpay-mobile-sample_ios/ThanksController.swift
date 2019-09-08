@@ -15,7 +15,6 @@ class ThanksController : UIViewController {
     
     var token:String?
     var accessToken:String?
-    var path = "thanks"
     var webView: WKWebView!
 
     @IBOutlet weak var topButton: UIButton!
@@ -46,6 +45,8 @@ class ThanksController : UIViewController {
             // 画面を開く
             webView = WKWebView(frame: rect, configuration: webConfig)
             let query = "?token=" + token! + (accessToken == nil ? "" : "&accessToken=" + accessToken!);
+            
+            let path = Holder.mode == "app" ? "confirm_purchase" : "thanks";
             let webUrl = URL(string: Config.shared.baseUrl + path + query)!
             var myRequest = URLRequest(url: webUrl)
             myRequest.httpMethod = "POST"
