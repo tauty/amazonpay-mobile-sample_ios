@@ -10,7 +10,7 @@ import Foundation
 
 struct Config {
     static let shared = Config()
-    
+
     private let config: [AnyHashable: Any] = {
         let path = Bundle.main.path(forResource: "Info", ofType: "plist")!
         let plist = NSDictionary(contentsOfFile: path) as! [AnyHashable: Any]

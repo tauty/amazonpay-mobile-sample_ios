@@ -16,10 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         print("AppDelegate#application")
         
-        // token
-        let query = url.query!
-        let afterEqualIndex = query.index(after: query.lastIndex(of: "=")!)
-        let token = String(query.suffix(from: afterEqualIndex))
+        // parse URL parameters
+        var urlParams = Dictionary<String, String>.init()
+        for param in url.query!.components(separatedBy: "&") {
+            let kv = param.components(separatedBy: "=")
+            urlParams[kv[0]] = kv[1]
+        }
         
         //　windowを生成
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -30,12 +32,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case "thanks":
             // Thanks画面を起動
             
+            // token check
+            if(isTokenNG(urlParams["token"]!, initial:urlParams["appToken"]!)) {
+                return toError(storyboard);
+            }
+            
             // ViewControllerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
             let vc = storyboard.instantiateViewController(withIdentifier: "ThanksVC")
             
             // tokenの設定
-            (vc as? ThanksController)?.token = token
-            
+            (vc as? ThanksController)?.token = urlParams["token"]!
+            if(urlParams["accessToken"] != nil) {
+                (vc as? ThanksController)?.accessToken = urlParams["accessToken"]!
+            }
             // rootViewControllerに入れる
             self.window?.rootViewController = vc
             // 表示
@@ -53,13 +62,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             // callbackを起動
-            (vc as? UIWebViewController)?.jsCallbackHandler(token)
+            (vc as? UIWebViewController)?.jsCallbackHandler(urlParams["token"]!)
             return true
 
         default:
             return true
         }
         
+    }
+    
+    func isTokenNG(_ token:String, initial appToken:String) -> Bool {
+        if(appToken != Holder.appToken!) {
+            print("appToken doesn't match! app retained token:" + Holder.appToken! + ", conveyed token:" + appToken);
+            return true;
+        }
+        if(token == appToken) {
+            print("token has not been refreshed! token:" + token)
+            return true;
+        }
+        return false
+    }
+    
+    func toError(_ storyboard:UIStoryboard) -> Bool {
+        // ViewControllerを指定(ThanksControllerのIdentity → Storyboard IDを参照)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ErrorVC")
+        // rootViewControllerに入れる
+        self.window?.rootViewController = vc
+        // 表示
+        self.window?.makeKeyAndVisible()
+        return true;
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

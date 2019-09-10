@@ -2,50 +2,60 @@
 下記のiOSアプリの実装です。
 https://github.com/tauty/amazonpay-mobile-sample_server
 
+## 動作環境
+Apple iOS バージョン11.2以降: Safari Mobile 11以降  
+[参考] https://pay.amazon.com/jp/help/202030010
+
 ## Native版
 通常のiOSアプリ向けの実装サンプルです。  
 アプリ側で商品の購入数を選んで受注情報を作成し、SFSafariViewを起動してAmazon Payへのログイン・住所＆支払い方法の選択・購入を実施し、またアプリ側に戻って購入完了画面を表示します。  
 
-### 動作環境
-Apple iOS バージョン11.2以降: Safari Mobile 11以降  
-[参考] https://pay.amazon.com/jp/help/202030010
+### アプリ側に購入ボタンがあるフロー
+アプリ側で商品の購入数を選んで受注情報を作成し、SFSafariViewを起動してAmazon Payへのログインしてデフォルトの住所＆支払い方法を取得し、アプリに戻って確認画面を表示して購入を実施します。  
 
-### 画面動作
-![native_flow](img/ios_native.gif)
+![i_app_native](img/i_app_native.gif)
 
-### 詳細フロー
-[flow-ios.xlsx](./flow-ios.xlsx)の「Native」タブ参照。  
+住所・支払い方法を変更したい場合には確認外面で「送付先・支払い変更」ボタンをクリックして再度ブラウザを立ち上げて選択します。
+
+![i_app_native_addr](img/i_app_native_addr.gif)  
+
+詳細は、[flow-ios.xlsx](./flow-ios.xlsx)の「Native - app決済」タブ参照。  
+※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
+
+### 起動したブラウザ側に購入ボタンがあるフロー
+アプリ側で商品の購入数を選んで受注情報を作成し、ブラウザを起動してAmazon Payへのログイン・住所＆支払い方法の選択・購入を実施し、またアプリ側に戻って購入完了画面を表示します。  
+![i_safari_native](img/i_safari_native.gif)  
+
+詳細は、[flow-ios.xlsx](./flow-ios.xlsx)の「Native - safari決済」タブ参照。  
 ※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
 
 ## WebView版
 WebView(アプリ内ブラウザ)を使ったアプリ向けの実装サンプルです。  
-基本的な流ればNative版と同じで、WebView内で商品の購入数を選んで受注情報を作成し、SFSafariViewを起動してAmazon Payへのログイン・住所＆支払い方法の選択・購入を実施し、またアプリ側に戻って購入完了画面を表示します。  
+
+### アプリ側に購入ボタンがあるフロー
+基本的な流ればNative版と同じで、WebView内で商品の購入数を選んで受注情報を作成し、SFSafariViewを起動してAmazon Payへのログインしてデフォルトの住所＆支払い方法を取得し、アプリに戻って確認画面を表示して購入を実施します。  
 ※ Amazon Payではセキュリティ確保のため、URLを隠したり偽装したりできてしまうWebView上でのログイン処理を原則禁止しております。そのため、本サンプルのようにSFSafariViewへ処理を飛ばす必要があります。
 
-### 動作環境
-Apple iOS バージョン11.2以降: Safari Mobile 11以降  
-[参考] https://pay.amazon.com/jp/help/202030010
+![i_app_webview](img/i_app_webview.gif)
 
-### 画面動作
-![webview_flow](img/ios_webview.gif)
+住所・支払い方法を変更したい場合には確認外面で「送付先・支払い変更」ボタンをクリックして再度ブラウザを立ち上げて選択します。
 
-### 詳細フロー
-[flow-ios.xlsx](./flow-ios.xlsx)の「WebView」タブ参照。  
+詳細は、[flow-ios.xlsx](./flow-ios.xlsx)の「WebView - app決済」タブ参照。  
+※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
+
+### 起動したブラウザ側に購入ボタンがあるフロー
+こちらもNative版TO同じで、アプリ側で商品の購入数を選んで受注情報を作成し、ブラウザを起動してAmazon Payへのログイン・住所＆支払い方法の選択・購入を実施し、またアプリ側に戻って購入完了画面を表示します。
+
+![i_safari_webview](img/i_safari_webview.gif)
+
+詳細は、[flow-ios.xlsx](./flow-ios.xlsx)の「WebView - safari決済」タブ参照。  
 ※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
 
 ## UIWebView版
 WebView(アプリ内ブラウザ)の中でも旧バージョンの、UIWebViewを使ったアプリ向けの実装サンプルです。  
 動作や見た目は全くWebView版と同じですが、SFSafariViewの起動方法に一部違いがあります。
 
-### 動作環境
-Apple iOS バージョン11.2以降: Safari Mobile 11以降  
-[参考] https://pay.amazon.com/jp/help/202030010
-
-### 画面動作
-WebView版と同じ同じであるため割愛
-
-### 詳細フロー
-[flow-ios.xlsx](./flow-ios.xlsx)の「UIWebView」タブ参照。  
+詳細は、[flow-ios.xlsx](./flow-ios.xlsx)の「UIWebView - app決済」「UIWebView - safari決済」タブ参照。  
 ※ 同flowには各処理のURL, 処理するClass名、HTMLテンプレート名なども記載されているので、サンプルコードを読む時にもご参照ください。
 
 # iOS版サンプルアプリのインストール
