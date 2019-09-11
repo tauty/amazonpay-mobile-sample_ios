@@ -32,7 +32,7 @@ Apple iOS バージョン11.2以降: Safari Mobile 11以降
 WebView(アプリ内ブラウザ)を使ったアプリ向けの実装サンプルです。  
 
 ### アプリ側に購入ボタンがあるフロー
-基本的な流ればNative版と同じで、WebView内で商品の購入数を選んで受注情報を作成し、SFSafariViewを起動してAmazon Payへのログインしてデフォルトの住所＆支払い方法を取得し、アプリに戻って確認画面を表示して購入を実施します。  
+基本的な流れはNative版と同じで、WebView内で商品の購入数を選んで受注情報を作成し、SFSafariViewを起動してAmazon Payへのログインしてデフォルトの住所＆支払い方法を取得し、アプリに戻って確認画面を表示して購入を実施します。  
 ※ Amazon Payではセキュリティ確保のため、URLを隠したり偽装したりできてしまうWebView上でのログイン処理を原則禁止しております。そのため、本サンプルのようにSFSafariViewへ処理を飛ばす必要があります。
 
 ![i_app_webview](img/i_app_webview.gif)
