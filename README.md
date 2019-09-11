@@ -107,7 +107,6 @@ Installが完了します。
 <img src="img/simu_trust.png" width="300">  
 
 あとはSimulator上でサンプルアプリを立ち上げて動作をご確認ください。
-iOSのNativeのアプリからAmazonPayで購入するサンプルと、WebViewからAmazonPayで購入するサンプルの、両方の動作をご確認いただけます。
 
 # Login with Amazonと会員連携について
 今回のサンプルで提示した方式を応用することで、Amazon Accountを用いた会員連携も実現できます。
