@@ -67,7 +67,13 @@ class NativeController : UIViewController {
         session.dataTask(with: request) { (data, response, error) in
             if error == nil, let data = data, let response = response as? HTTPURLResponse {
                 print("statusCode: \(response.statusCode)")
-                self.token = String(data: data, encoding: .utf8)
+                do {
+                    let items = try JSONSerialization.jsonObject(with: data) as! Dictionary<String, String>
+                    self.token = items["token"]!
+                    Holder.appKey = items["appKey"]!
+                } catch {
+                    print(error)
+                }
             }
         }.resume()
     }

@@ -40,12 +40,13 @@ class UIWebViewController : UIViewController {
         }
     }
     
-    func jsCallbackHandler(_ token:String) {
+    func jsCallbackHandler(_ token:String, _ appKey:String) {
         print("UIWebViewController#jsCallbackHandler")
         
         let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl
             + "button?token=" + token + "&mode=" + Holder.mode)! as URL)
         Holder.appToken = token
+        Holder.appKey = appKey
         present(safariView, animated: true, completion: nil)
     }
 }

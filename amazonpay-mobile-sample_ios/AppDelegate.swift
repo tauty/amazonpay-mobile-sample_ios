@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             // callbackを起動
-            (vc as? UIWebViewController)?.jsCallbackHandler(urlParams["token"]!)
+            (vc as? UIWebViewController)?.jsCallbackHandler(urlParams["token"]!, urlParams["appKey"]!)
             return true
 
         default:

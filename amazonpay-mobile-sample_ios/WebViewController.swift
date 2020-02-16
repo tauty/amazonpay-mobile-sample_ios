@@ -57,11 +57,16 @@ extension WebViewController: WKScriptMessageHandler {
         switch message.name {
         case "jsCallbackHandler":
             print("jsCallbackHandler")
-            if let token = message.body as? String {
+            if let data = message.body as? NSDictionary {
+                let token = data["token"] as! String
+                let appKey = data["appKey"] as! String
+                
                 // SFSafariViewの購入フローを起動
                 let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl
                     + "button?token=" + token + "&mode=" + Holder.mode)! as URL)
                 Holder.appToken = token
+                Holder.appKey = appKey
+                
                 present(safariView, animated: true, completion: nil)
             }
         default:

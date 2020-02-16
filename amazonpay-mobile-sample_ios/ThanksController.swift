@@ -44,7 +44,7 @@ class ThanksController : UIViewController {
             
             // 画面を開く
             webView = WKWebView(frame: rect, configuration: webConfig)
-            let query = "?token=" + token! + (accessToken == nil ? "" : "&accessToken=" + accessToken!);
+            let query = "?token=" + token! + "&appKey=" + Holder.appKey! + (accessToken == nil ? "" : "&accessToken=" + accessToken!);
             
             let path = Holder.mode == "app" ? "confirm_purchase" : "thanks";
             let webUrl = URL(string: Config.shared.baseUrl + path + query)!
@@ -66,11 +66,16 @@ extension ThanksController: WKScriptMessageHandler {
         switch message.name {
         case "jsCallbackHandler":
             print("jsCallbackHandler")
-            if let token = message.body as? String {
+            if let data = message.body as? NSDictionary {
+                let token = data["token"] as! String
+                let appKey = data["appKey"] as! String
+                
                 // SFSafariViewの購入フローを起動
                 let safariView = SFSafariViewController(url: NSURL(string: Config.shared.baseUrl
                     + "button?token=" + token + "&mode=" + Holder.mode + "&showWidgets=true")! as URL)
                 Holder.appToken = token
+                Holder.appKey = appKey
+                
                 present(safariView, animated: true, completion: nil)
             }
         default:
